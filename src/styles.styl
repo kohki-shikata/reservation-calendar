@@ -1,0 +1,100 @@
+*
+  box-sizing border-box
+  
+body
+  background #ddd
+
+#cal
+  width 100vw
+  table
+    width 100%
+    border-collapse collapse
+    border-spacing 0
+  table,th,td
+    border none
+    padding 0
+  thead
+    th
+      position sticky
+      top 0
+      z-index 1
+      background #999
+      color #fff
+      position sticky
+      &.js-saturday
+        background #6fb8c9
+      &.js-sunday
+        background #ED8785
+      .js-headerLabelName
+        display flex
+        flex-flow row wrap
+      .js-nameLabel
+        background #eee
+        color #666
+        margin 0
+  tbody
+    th:first-child
+      position sticky
+      left 0
+    .js-timeLabel, .js-timeCell
+      width calc((100% - 80px) / 7)
+      height 170px
+    .js-timeLabel
+      background #eee
+      width 80px
+      color #777
+      text-align center
+      font-weight bold
+    .js-timeCell
+      background #f2f2f2
+      border-right 1px solid #d7d7d7
+    .js-innerCell
+      background #ccc
+      height 25%
+      &:nth-child(odd)
+        background #ddd
+    .js-dayWrapper
+      display flex
+      flex-flow row wrap
+    .js-dayWrapperRow
+      border-bottom 1px solid #b4b4b4
+      &:last-child
+        border-right 0
+    .js-timeCellPerson
+      height calc(200px / 4)
+      background #f4f4f4
+      display flex
+      flex-flow row wrap
+      align-items center
+      justify-content center
+      min-width 50px
+      &:nth-child(odd)
+        background #fefefe
+
+    .is-occupied,
+    .is-occupied:nth-child(odd)
+      background: #ddd
+      font-size 38px
+      color #ccc
+    .available
+      background #e6f1c3
+      font-weight bold
+      display flex
+      flex-flow column
+      p
+        margin 0
+    .available:nth-child(odd)
+      background #d3e7c9
+    .reservationLabel
+      font-size 10px
+      color green
+      text-align center
+    .notAvailable,
+    .notAvailable:nth-child(odd)
+      background #ddd
+      color #ccc
+      font-size 38px
+[id^="checkbox-"]
+  position relative
+  
+
